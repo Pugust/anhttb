@@ -1,29 +1,14 @@
-# Meridia's Beacon — V0
+# Meridia's Beacon V0.2
+Protótipo corrigido do lockpicking.
 
-Protótipo bruto da experiência de QR Code, feito somente com HTML/CSS/JS.
-
-## V0 inclui
-- Lockpicking interativo por toque/mouse.
-- Sweet spot.
-- Resistência e tremedeira.
-- Quebra do lockpick.
-- Vibração quando suportada pelo dispositivo.
-- Abertura da fechadura.
-- Transição para Lockpicking 100.
-- Tela de transição com fumaça procedural.
-- Botão PEGAR ITEM.
-- Beacon placeholder em CSS.
-- Estrutura pronta para áudio e modelo 3D.
-
-## Sem assets externos
-A V0 não depende de imagens, fontes, SFX, modelos 3D ou bibliotecas externas.
-
-## GitHub Pages
-Em Settings → Pages:
-1. Source: Deploy from a branch
-2. Branch: main
-3. Folder: / (root)
-4. Salve e aguarde a URL do Pages.
-
-## Próximos assets
-Os diretórios `assets/audio`, `assets/models`, `assets/images` e `assets/fonts` já estão preparados.
+- O lockpick é radial: a ponta fica presa no centro e o corpo gira ao redor dela.
+- Primeiro você posiciona o lockpick com o dedo/mouse.
+- Depois pressiona e arrasta para fora para aplicar força e girar o tambor.
+- A abertura depende de duas coisas: posição angular correta + força suficiente.
+- Quanto mais longe do ponto correto, maior a resistência.
+- Zona crítica quebra rapidamente; zonas apenas ruins resistem por mais tempo.
+- O lockpick pode tremer durante a resistência.
+- Ao quebrar, outro aparece automaticamente após breve atraso.
+- Não há botão TENTAR.
+- O Beacon permanece invisível até PEGAR ITEM.
+- Áudios originais podem ser colocados em assets/audio/ conforme os nomes em js/audio.js.

@@ -1,58 +1,18 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#000000">
-  <title>Meridia's Beacon — V0</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/lockpicking.css">
-  <link rel="stylesheet" href="css/beacon.css">
-</head>
-<body>
-  <main id="app">
-    <section id="lockpicking-screen" class="screen active">
-      <div class="lock-ui">
-        <div class="lock-body" aria-label="Fechadura de teste">
-          <div class="lock-ring"></div>
-          <div id="lockpick" class="lockpick" role="slider" aria-label="Posição do lockpick" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-            <span></span>
-          </div>
-          <div class="keyway"></div>
-        </div>
-        <div class="instruction">Arraste o lockpick e toque em TENTAR</div>
-        <button id="try-button" class="skyrim-button">TENTAR</button>
-        <div id="attempt-status" class="status" aria-live="polite"></div>
-        <div class="tries">Tentativas: <span id="tries">0</span></div>
-      </div>
-    </section>
-
-    <section id="skill-screen" class="screen">
-      <div id="skill-card" class="skill-card">
-        <div class="skill-label">LOCKPICKING</div>
-        <div class="skill-value"><span id="skill-from">99</span> → <span id="skill-to">100</span></div>
-        <div class="skill-up">SKILL INCREASED</div>
-      </div>
-    </section>
-
-    <section id="beacon-screen" class="screen">
-      <div class="smoke smoke-a"></div>
-      <div class="smoke smoke-b"></div>
-      <div class="smoke smoke-c"></div>
-      <div class="beacon-glow"></div>
-      <button id="take-item" class="take-item">PEGAR ITEM</button>
-      <div id="beacon-placeholder" class="beacon-placeholder" aria-label="Placeholder do Meridia's Beacon">
-        <div class="crystal"></div>
-        <div class="crystal-core"></div>
-      </div>
-      <div id="beacon-message" class="beacon-message" aria-live="polite"></div>
-    </section>
-  </main>
-
-  <script src="js/audio.js"></script>
-  <script src="js/lockpicking.js"></script>
-  <script src="js/skill.js"></script>
-  <script src="js/beacon.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Meridia's Beacon</title><link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/lockpicking.css"><link rel="stylesheet" href="css/beacon.css">
+</head><body><main>
+<section id="lock-screen" class="screen active"><div class="lock-ui">
+<div class="lock-title">LOCKPICKING</div><div id="lock-instruction">Posicione o lockpick e gire a fechadura.</div>
+<div id="lock-stage" class="lock-stage"><div class="lock-body"><div id="lock-cylinder" class="lock-cylinder"></div><div class="keyway"></div>
+<div id="lockpick" class="lockpick"><div class="pick-tip"></div><div class="pick-shaft"></div><div class="pick-handle"></div></div></div></div>
+<div id="lock-status" class="lock-status">Encontre a posição correta.</div>
+<div class="lock-stats"><span>LOCKPICKS: <b id="pick-count">1</b></span><span>TENTATIVAS: <b id="attempt-count">0</b></span></div>
+</div></section>
+<section id="skill-screen" class="screen"><div class="skill-card"><div class="skill-name">LOCKPICKING</div><div class="skill-values"><span>99</span><span>→</span><span>100</span></div><div class="skill-sub">SKILL INCREASED</div></div></section>
+<section id="beacon-screen" class="screen"><div class="beacon-bg"></div><div class="smoke smoke-a"></div><div class="smoke smoke-b"></div><div class="smoke smoke-c"></div><div class="beacon-glow"></div>
+<button id="take-item" class="take-item">PEGAR ITEM</button>
+<div id="beacon-object" class="beacon-object"><div class="crystal c1"></div><div class="crystal c2"></div><div class="crystal c3"></div><div class="core"></div></div>
+<div id="beacon-message" class="beacon-message">A new hand touches the Beacon.</div></section></main>
+<script src="js/audio.js"></script><script src="js/lockpicking.js"></script><script src="js/skill.js"></script><script src="js/beacon.js"></script><script src="js/main.js"></script>
+</body></html>
